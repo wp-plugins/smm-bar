@@ -21,24 +21,18 @@ Beim Aufruf eines Artikels im Browser fragt das Plugin die Schnittstellen der So
 
 Die dargestellten Kennzahlen werden für 1 Stunde im WordPress-Cache aufbewahrt, um die Performance der Aufrufe zu schonen.
 
-Auf welchen Seiten ist die *SMM Bar* aktiv? **Veröffentlichte** Artikel, statische Seite und Custom Post Types profitieren vom Plugin. Andere Seitenarten werden nicht berücksichtigt.
+Auf welchen Seiten ist die *SMM Bar* aktiv? Veröffentlichte Artikel (Posts), statische Seiten (Pages) und Custom Post Types profitieren vom Plugin. Andere Seitenarten werden nicht berücksichtigt.
 
-Übrigens kommt das Plugin für Social Media ganz ohne Einstellungen aus. Installieren, aktivieren, bereit. Beim Aufruf der Blogseiten im Browser erscheinen die farbigen Etiketten mit Social Media Diensten und entsprechenden Zählern innerhalb der Admin Bar.
+Übrigens kommt das Plugin für Social Media ganz ohne Einstellungen aus. Installieren, aktivieren, bereit. Beim Aufruf der Blogseiten (Achtung, nicht die Startseite) im Browser, erscheinen die farbigen Etiketten mit Social Media Diensten und entsprechenden Zahlen innerhalb der Admin Bar.
 
-= Video =
 [vimeo https://vimeo.com/40609217]
 
 = Hooks =
 Da *SMM Bar* die Werte intern zwischenspeichert, kann das aktive WordPress Theme auf diese Daten zugreifen und an der gewünschten Stelle im Theme-Template ausgeben (z.B. um ein Link oder Badge zu gestalten). Dafür verfügt das Social Media Tool über folgende Ausgabe-Hooks:
 
-* Für Twitter
-`<?php do_action('smmbar-data-count', 'twitter') ?>`
-
-* Für Google+
-`<?php do_action('smmbar-data-count', 'gplus') ?>`
-
-* Für Facebook
-`<?php do_action('smmbar-data-count', 'facebook') ?>`
+* Für Twitter: `<?php do_action('smmbar-data-count', 'twitter') ?>`
+* Für Google+: `<?php do_action('smmbar-data-count', 'gplus') ?>`
+* Für Facebook: `<?php do_action('smmbar-data-count', 'facebook') ?>`
 
 Über den Filter `smmbar-data-item` können zusätzliche Dienste zur Anzeige hinzugefügt und vorhandene Services editiert werden.
 
