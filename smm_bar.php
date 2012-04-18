@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: SMM Bar
-Description: Social Media Monitoring für WordPress. Kennzahlen zu Shares der Blogartikel auf Facebook, Google+ und Twitter in der Admin Bar.
+Description: Social Media Monitoring für WordPress. Kennzahlen zu Shares der Blogartikel auf Facebook, Google+ und Twitter in der Admin Bar
 Author: Sergej M&uuml;ller
 Author URI: http://wpseo.de
 Plugin URI: http://wordpress.org/extend/plugins/smm-bar/
