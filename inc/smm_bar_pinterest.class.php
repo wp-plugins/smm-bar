@@ -8,17 +8,17 @@ if ( !class_exists('SMM_Bar') ) {
 
 
 /**
-* SMM_Bar_Twitter
+* SMM_Bar_Pinterest
 */
 
-final class SMM_Bar_Twitter {
+final class SMM_Bar_Pinterest {
 	
 	
 	/**
 	* Initialisiert den Zähler
 	*
-	* @since   0.0.1
-	* @change  0.0.1
+	* @since   0.0.2
+	* @change  0.0.2
 	*
 	* @param   array   $data       Array mit vorhandenen Kennzahlen
 	* @param   string  $permalink  Permalink des Artikels
@@ -26,8 +26,8 @@ final class SMM_Bar_Twitter {
 	*/
 	
 	public static function init($data, $permalink) {
-		$data['twitter'] = array(
-			'name'  => 'Twitter',
+		$data['pinterest'] = array(
+			'name'  => 'Pinterest',
 			'count' => (int) self::_count($permalink)
 		);
 		
@@ -38,7 +38,7 @@ final class SMM_Bar_Twitter {
 	/**
 	* Fragt die API ab
 	*
-	* @since   0.0.1
+	* @since   0.0.2
 	* @change  0.0.2
 	*
 	* @param   string  $permalink  Permalink des Artikels
@@ -50,7 +50,7 @@ final class SMM_Bar_Twitter {
 		$response = wp_remote_get(
 			esc_url_raw(
 				sprintf(
-					'https://urls.api.twitter.com/1/urls/count.json?url=%s',
+					'https://api.pinterest.com/v1/urls/count.json?callback=&url=%s',
 					urlencode($permalink)
 				),
 				array('http', 'https')
@@ -66,18 +66,24 @@ final class SMM_Bar_Twitter {
 		}
 		
 		/* Auslesen */
-		if ( ! $json = wp_remote_retrieve_body($response) ) {
+		if ( ! $body = wp_remote_retrieve_body($response) ) {
 			return null;
 		}
 		
 		/* JSON */
-		$data = json_decode($json);
+		$json = json_decode(
+			str_replace(
+				array('(', ')'),
+				'',
+				$body
+			)
+		);
 		
 		/* Leer? */
-		if ( empty($data->count) ) {
+		if ( empty($json->count) ) {
 			return null;
 		}
 		
-		return $data->count;
+		return $json->count;
 	} 
 }

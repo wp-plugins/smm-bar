@@ -39,7 +39,7 @@ final class SMM_Bar_FB {
 	* Fragt die API ab
 	*
 	* @since   0.0.1
-	* @change  0.0.1
+	* @change  0.0.2
 	*
 	* @param   string  $permalink  Permalink des Artikels
 	* @return  mixed   $count      Ermittelte Anzahl
@@ -48,9 +48,12 @@ final class SMM_Bar_FB {
 	private static function _count($permalink) {
 		/* Anfrage */
 		$response = wp_remote_get(
-			sprintf(
-				'https://graph.facebook.com/%s',
-				urlencode($permalink)
+			esc_url_raw(
+				sprintf(
+					'https://graph.facebook.com/%s',
+					urlencode($permalink)
+				),
+				array('http', 'https')
 			),
 			array(
 				'sslverify' => false

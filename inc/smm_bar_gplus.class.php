@@ -39,7 +39,7 @@ final class SMM_Bar_Gplus {
 	* Fragt die API ab
 	*
 	* @since   0.0.1
-	* @change  0.0.1
+	* @change  0.0.2
 	*
 	* @param   string  $permalink  Permalink des Artikels
 	* @return  mixed   $count      Ermittelte Anzahl
@@ -64,7 +64,7 @@ final class SMM_Bar_Gplus {
 						'apiVersion' => 'v1',
 						'params' => array(
 							'nolog' => true,
-							'id' => $permalink,
+							'id' => esc_url_raw( $permalink, array('http', 'https') ),
 							'source' =>'widget',
 							'userId' =>'@viewer',
 							'groupId' =>'@self'

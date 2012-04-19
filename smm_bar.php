@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: SMM Bar
-Description: Social Media Monitoring für WordPress. Kennzahlen zu Shares der Blogartikel auf Facebook, Google+ und Twitter in der Admin Bar.
+Description: Social Media Monitoring für WordPress. Kennzahlen zu Shares der Blogartikel auf Facebook, Google+, Twitter und Pinterest in der Admin Bar.
 Author: Sergej M&uuml;ller
 Author URI: http://wpseo.de
 Plugin URI: http://wordpress.org/extend/plugins/smm-bar/
-Version: 0.0.1
+Version: 0.0.2
 */
 
 
@@ -37,7 +37,7 @@ if ( !( (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) or (defined('DOING_CRON') 
 
 /* Autoload */
 function smmbar_autoload($class) {
-	if ( in_array($class, array('SMM_Bar', 'SMM_Bar_Twitter', 'SMM_Bar_Gplus', 'SMM_Bar_FB')) ) {
+	if ( in_array($class, array('SMM_Bar', 'SMM_Bar_Twitter', 'SMM_Bar_Gplus', 'SMM_Bar_FB', 'SMM_Bar_Pinterest')) ) {
 		require_once(
 			sprintf(
 				'%s/inc/%s.class.php',

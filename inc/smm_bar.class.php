@@ -120,11 +120,11 @@ class SMM_Bar
 	* Registriert verfügbare Datentypen als Filter
 	*
 	* @since   0.0.1
-	* @change  0.0.1
+	* @change  0.0.2
 	*/
 	
 	public static function register_data() {
-		foreach( array('SMM_Bar_Twitter', 'SMM_Bar_Gplus', 'SMM_Bar_FB') as $class ) {
+		foreach( array('SMM_Bar_Twitter', 'SMM_Bar_Gplus', 'SMM_Bar_FB', 'SMM_Bar_Pinterest') as $class ) {
 			add_filter(
 				self::_app_hash('data', 'item'),
 				array(

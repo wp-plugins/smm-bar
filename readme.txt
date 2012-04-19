@@ -14,7 +14,7 @@ Monitoring für Social Media Marketing: Verbreitung der einzelnen Blogseiten als
 == Description ==
 
 = Monitoring =
-Das Plugin *SMM Bar* (SMM = Social Media Monitoring / Social Media Marketing) ermittelt die Anzahl der Shares für Google+, Facebook, Twitter und präsentiert die Werte übersichtlich in der WordPress Admin Bar. Zielsetzung: Erfolge der Social Media Optimization (SMO) ablesen.
+Das Plugin *SMM Bar* (SMM = Social Media Monitoring / Social Media Marketing) ermittelt die Anzahl der Shares für Google+, Facebook, Twitter, Pinterest und präsentiert die Werte übersichtlich in der WordPress Admin Bar. Zielsetzung: Erfolge der Social Media Optimization (SMO) ablesen.
 
 = Funktionsweise =
 Beim Aufruf eines Artikels im Browser fragt das Plugin die Schnittstellen der Social-Dienste ab und bildet die Zahlen in der Admin Bar ab. Es spielt dabei keine Rolle, ob der Administrator die Seite im Back- oder Frontend eines Blogs aufgerufen hat: Die aktivierte Admin Bar ist der Schlüssel für die Anzeige der Metriken.
@@ -33,6 +33,7 @@ Da *SMM Bar* die Werte intern zwischenspeichert, kann das aktive WordPress Theme
 * Für Twitter: `<?php do_action('smmbar-data-count', 'twitter') ?>`
 * Für Google+: `<?php do_action('smmbar-data-count', 'gplus') ?>`
 * Für Facebook: `<?php do_action('smmbar-data-count', 'facebook') ?>`
+* Für Pinterest: `<?php do_action('smmbar-data-count', 'pinterest') ?>`
 
 Über den Filter `smmbar-data-item` können zusätzliche Dienste zur Anzeige hinzugefügt und vorhandene Services editiert werden.
 
@@ -47,6 +48,10 @@ Da *SMM Bar* die Werte intern zwischenspeichert, kann das aktive WordPress Theme
 
 
 == Changelog ==
+
+= 0.0.2 =
+* Pinterest als Social Media Dienst
+* Absicherung der externen Links
 
 = 0.0.1 =
 * Live auf wordpress.org
