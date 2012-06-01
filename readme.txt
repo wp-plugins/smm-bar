@@ -1,7 +1,7 @@
 === SMM Bar ===
 Contributors: sergej.mueller
 Tags: social, media, marketing, admin bar
-Donate link: http://flattr.com/profile/sergej.mueller
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5RDDW9FEHGLG6
 Requires at least: 3.3
 Tested up to: 3.4
 Stable tag: trunk
@@ -38,11 +38,15 @@ Da *SMM Bar* die Werte intern zwischenspeichert, kann das aktive WordPress Theme
 Über den Filter `smmbar-data-item` können zusätzliche Dienste zur Anzeige hinzugefügt und vorhandene Services editiert werden.
 
 = Systemanforderungen =
-* PHP 5.2.0
-* WordPress 3.3
+* PHP ab 5.2
+* WordPress ab 3.3
+
+= Dokumentation =
+* [SMM Bar](https://plus.google.com/110569673423509816572/posts/bb3UvySpdpS "SMM Bar")
 
 = Autor =
 * [Google+](https://plus.google.com/110569673423509816572 "Google+")
+* [Plugins](http://wpcoder.de "Plugins")
 * [Portfolio](http://ebiene.de "Portfolio")
 
 
